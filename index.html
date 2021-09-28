@@ -6,30 +6,87 @@
   <link href="index_css.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <h1>Calculadora de Core</h1>
-  <script src = "index_js.js" type="text/javascript"> </script>
-  Número:
-  <input type="text" id="pantalla" onclick="vaciar()">
+  <div class="separar">
+  <div class="mycalc">
+    <form name="calculator" id="calculator">
+      <input type="text" name="inputwindow" id="inputwindow"></form>
+      <div>
+        <input type="button" id="one" value="1" onclick="takeValue(document.getElementById('one').value)">
+        <input type="button" id="two" value="2" onclick="takeValue(document.getElementById('two').value)">
+        <input type="button" id="three" value="3" onclick="takeValue(document.getElementById('three').value)">
+        <input type="button" id="plus" value="+" onclick="takeValue(document.getElementById('plus').value)">
+        </div>
+        <div>
+        <input type="button" id="four" value="4" onclick="takeValue(document.getElementById('four').value)">
+        <input type="button" id="five" value="5" onclick="takeValue(document.getElementById('five').value)">
+        <input type="button" id="six" value="6" onclick="takeValue(document.getElementById('six').value)">
+        <input type="button" id="minus" value="-" onclick="takeValue(document.getElementById('minus').value)">
+      </div>
+      <div>
+        <input type="button" id="seven" value="7" onclick="takeValue(document.getElementById('seven').value)">
+        <input type="button" id="eight" value="8" onclick="takeValue(document.getElementById('eight').value)">
+        <input type="button" id="nine" value="9" onclick="takeValue(document.getElementById('nine').value)">
+        <input type="button" id="by" value="*" onclick="takeValue(document.getElementById('by').value)">
+        </div>
+        <div>
+        <input type="button" id="zero" value="0" onclick="takeValue(document.getElementById('zero').value)">
+        <input type="button" id="decimal" value="." onclick="takeValue(document.getElementById('decimal').value)">
+        <input type="button" id="devide" value="/" onclick="takeValue(document.getElementById('devide').value)">
+        <input type="button" id="percent" value="%" onclick="takeValue(document.getElementById('percent').value)">
+        </div>
+        <div class="results">
+        <input type="button" id="equal" value="=" onclick="calculateResult()">
+        <button type="button" id="clear" value="" onclick="clearInput(document.getElementById('clear').value)">Clear</button>
+        </div>
+      </div>
+  </div>
+    <div class="separar">
+  <div class="main">
+    <h1>Calculadora de Core</h1>
+    <div class="input">
+      <p> Número:</p>
+      <input type="text" id="pantalla" onclick="vaciar()">
+    </div>
 
-  <h2 id="info" title="Info sobre el numero">Info sobre el numero</h2>
-  <h3> Operaciones unitarias </h3>
-  <button id="cuadrado" onclick="cuadrado()">x<sup>2</sup></button>
-  <button id="cubo" onclick="cubo()">x<sup>3</sup></button>
-  <button id="mod" onclick="mod()">mod</button>
-  <button id="factorial" onclick="factorial()">n!</button>
-  <h3>Operaciones binarias </h3>
-  <button id="suma" onclick="add()">+</button>
-  <button id="resta" onclick="resta()">-</button>
-  <button id="multiplicacion" onclick="mul()">*</button>
-  <button id="division" onclick="div()">/</button>
-  <button id="resto" onclick="resto()">%</button>
-  <button id="potencia" onclick="potencia()">^</button>
-  <button id="igual" onclick="eq()">=</button>
-  <h3>Operaciones en formato CSV</h3>
-  <button id="sumatorio" onclick="sumatorio()">&#8721x</button>
-  <button id="ordenar" onclick="ordenar()">ordenar</button>
-  <button id="revertir" onclick="revertir()">revertir</button>
-  <button id="quitar" onclick="quitar()">quitar</button>
-  <h2 id="p01"></h2>
- </body>
+    <div class="texto">
+    <h2 id="info" title="Info sobre el numero">Info sobre el numero</h2>
+    </div>
+    <div class="texto">
+    <h3> Operaciones unitarias </h3>
+  </div>
+  <div class="botones">
+    <button id="cuadrado" onclick="cuadrado()">x<sup>2</sup></button>
+    <button id="cubo" onclick="cubo()">x<sup>3</sup></button>
+    <button id="mod" onclick="mod()">mod</button>
+    <button id="factorial" onclick="factorial()">n!</button>
+  </div>
+    <div class="texto">
+    <h3>Operaciones binarias </h3>
+  </div>
+  <div class="botones">
+    <button id="suma" onclick="add()">+</button>
+    <button id="resta" onclick="resta()">-</button>
+    <button id="multiplicacion" onclick="mul()">*</button>
+    <button id="division" onclick="div()">/</button>
+    <button id="resto" onclick="resto()">%</button>
+    <button id="potencia" onclick="potencia()">^</button>
+    <button id="igual" onclick="eq()">=</button>
+  </div>
+  <div class="texto">
+    <h3>Operaciones en formato CSV</h3>
+  </div>
+  <div class="botones">
+    <button id="sumatorio" onclick="sumatorio()">&#8721x</button>
+    <button id="ordenar" onclick="ordenar()">ordenar</button>
+    <button id="revertir" onclick="revertir()">revertir</button>
+    <button id="quitar" onclick="quitar()">quitar</button>
+  </div>
+  <div class="texto">
+    <h2 id="p01">eee</h2>
+  </div>
+  </div>
+</div>
+
+  <script src = "index_js.js" type="text/javascript"> </script>
+</body>
 </html>

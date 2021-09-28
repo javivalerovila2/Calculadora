@@ -1,4 +1,10 @@
 
+//Definimos variables globales
+var numero1 = 0
+var numero = 0
+var operador =""
+
+
 //Funcion que vacia el contenido de la consola
 
 const vaciar = () => {
@@ -6,6 +12,7 @@ const vaciar = () => {
   }
 
 // Funcion rellenar info que indica si el resultado es <100 | >100 & <200 | >200
+// Recibe el resultado de la operacion realizada y devuelve un string
 
 var rellenar_info = (num) => {
 if (num < 100){
@@ -17,6 +24,168 @@ else if (num < 200){
 else if (num > 200){
     document.getElementById("info").innerHTML = "Info: El resultado es superior a 200"
 }
+}
+
+//no puedo meter numeros de varios digitos -- los concateno
+//no tengo la funcion de coma implementada
+var actualiza_info0 = () => {
+if (numero1 == 0 && numero == 0) {
+
+numero1 = 0
+document.getElementById("consola").innerHTML = numero1
+}
+
+else if (numero1 != 0 && numero == 0){
+numero = 0
+document.getElementById("consola").innerHTML = numero1 + operador + numero
+}}
+
+var actualiza_info1 = () => {
+if (numero1 == 0 && numero == 0) {
+numero1 = 1
+document.getElementById("consola").innerHTML = numero1
+}
+else if (numero1 != 0 && numero == 0){
+numero = 1
+document.getElementById("consola").innerHTML = numero1 + operador + numero
+}}
+
+var actualiza_info2 = () => {
+if (numero1 == 0 && numero == 0) {
+numero1 = 2
+document.getElementById("consola").innerHTML = numero1
+}
+else if (numero1 != 0 && numero == 0){
+numero = 2
+document.getElementById("consola").innerHTML = numero1 + operador + numero
+}}
+
+var actualiza_info3 = () => {
+if (numero1 == 0 && numero == 0) {
+numero1 = 3
+document.getElementById("consola").innerHTML = numero1
+}
+else if (numero1 != 0 && numero == 0){
+numero = 3
+document.getElementById("consola").innerHTML = numero1 + operador + numero
+}}
+
+var actualiza_info4 = () => {
+if (numero1 == 0 && numero == 0) {
+numero1 = 4
+document.getElementById("consola").innerHTML = numero1
+}
+else if (numero1 != 0 && numero == 0){
+numero = 4
+document.getElementById("consola").innerHTML = numero1 + operador + numero
+}}
+
+var actualiza_info5 = () => {
+if (numero1 == 0 && numero == 0) {
+numero1 = 5
+document.getElementById("consola").innerHTML = numero1
+}
+else if (numero1 != 0 && numero == 0){
+numero = 5
+document.getElementById("consola").innerHTML = numero1 + operador + numero
+}}
+
+var actualiza_info6 = () => {
+if (numero1 == 0 && numero == 0) {
+numero1 = 6
+document.getElementById("consola").innerHTML = numero1
+}
+else if (numero1 != 0 && numero == 0){
+numero = 6
+document.getElementById("consola").innerHTML = numero1 + operador + numero
+}}
+
+var actualiza_info7 = () => {
+if (numero1 == 0 && numero == 0) {
+numero1 = 7
+document.getElementById("consola").innerHTML = numero1
+}
+else if (numero1 != 0 && numero == 0){
+numero = 7
+document.getElementById("consola").innerHTML = numero1 + operador + numero
+}}
+
+var actualiza_info8 = () => {
+if (numero1 == 0 && numero == 0) {
+numero1 = 8
+document.getElementById("consola").innerHTML = numero1
+}
+else if (numero1 != 0 && numero == 0){
+numero = 8
+document.getElementById("consola").innerHTML = numero1 + operador + numero
+}}
+
+var actualiza_info9 = () => {
+if (numero1 == 0 && numero == 0) {
+numero1 = 9
+document.getElementById("consola").innerHTML = numero1
+}
+else if (numero1 != 0 && numero == 0){
+numero = 9
+document.getElementById("consola").innerHTML = numero1 + operador + numero
+}}
+
+
+var suma = () => {
+    operador = "+"
+    document.getElementById("consola").innerHTML = numero1 + operador
+}
+
+var rest = () => {
+    operador = "-"
+    document.getElementById("consola").innerHTML = numero1 + operador
+}
+
+var multiplic = () => {
+    operador = "*"
+    document.getElementById("consola").innerHTML = numero1 + operador
+}
+
+var dividir = () => {
+    operador = "/"
+    document.getElementById("consola").innerHTML = numero1 + operador
+}
+
+var igual = () => {
+
+    if (operador == "-") {
+        document.getElementById("consola").innerHTML = numero1 + operador + numero + " = " + (numero1-numero)
+        operador == ""
+        numero == 0
+
+    }
+    else if (operador == "*") {
+        document.getElementById("consola").innerHTML = numero1 + operador + numero + "=" + (numero*numero1)
+        operador == ""
+        numero == 0
+    }
+    else if (operador == "+") {
+        document.getElementById("consola").innerHTML = numero1 + operador + numero + " = " + (numero+numero1)
+        operador == ""
+        numero == 0
+
+    }
+    else if (operador == "/") {
+        document.getElementById("consola").innerHTML = numero1 + operador + numero + "=" + (numero1/numero)
+        operador == ""
+        numero == 0
+    }
+    else if (operador == "%") {
+        document.getElementById("consola").innerHTML = numero1 + operador + numero + "=" + (numero1%numero)
+        operador == ""
+        numero == 0
+    }
+    else if (operador == "**") {
+        num.value = Number(numero1) ** Number(numero)
+        operador == ""
+        numero == 0
+    }
+
 }
 
 //Funcion que calcula el cuadrado de un numero
@@ -63,9 +232,7 @@ rellenar_info(num.value)
 }
 
 
-//Definimos variables globales
-var numero = 1
-var operador =""
+
 
 
 //Funcion que calcula la suma de dos numeros introducidos
@@ -134,6 +301,9 @@ var potencia = () =>  {
     vaciar()
     }
 
+
+
+
 //Funcion que hace uso de las variables globales para realizar la operacion correspondiente
 
 var eq = () =>  {
@@ -141,27 +311,32 @@ let num = document.getElementById("pantalla");
 if (operador == "-") {
     num.value = Number(numero) - Number(num.value)
     operador == ""
+    numero == 0
 }
 else if (operador == "*") {
     num.value = Number(numero) * Number(num.value)
     operador == ""
-
+    numero == 0
 }
 else if (operador == "+") {
     num.value = Number(numero) + Number(num.value)
     operador == ""
+    numero == 0
 }
 else if (operador == "/") {
     num.value = Number(numero) / Number(num.value)
     operador == ""
+    numero == 0
 }
 else if (operador == "%") {
     num.value = Number(numero) % Number(num.value)
     operador == ""
+    numero == 0
 }
 else if (operador == "**") {
     num.value = Number(numero) ** Number(num.value)
     operador == ""
+    numero == 0
 }
 }
 
@@ -235,7 +410,7 @@ message.innerHTML = "";
 let list = num.value.split(",");
 for (let i of list) {
     try {         //Podria poner la funcion validar, ganaria eficiencia??
-        if(isNaN(i)) throw "Error al introducir los datos. Vuelva a intentarlo";
+        if(isNaN(i)) throw "Error. Vuelva a intentarlo";
         i = Number(i)
         }
         catch(err) {
@@ -243,4 +418,18 @@ for (let i of list) {
     }
 }
 
+}
+
+function takeValue(x) {
+	document.getElementById('inputwindow').value += x;
+}
+
+function clearInput(y) {
+	document.getElementById('inputwindow').value = y;
+}
+
+//Eval() coge la expresion entera, la analiza y la resuelve
+function calculateResult() {
+	var result = eval(document.getElementById('inputwindow').value);
+	document.getElementById('inputwindow').value = result;
 }
