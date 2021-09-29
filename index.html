@@ -39,7 +39,7 @@
         <button type="button" id="clear" value="" onclick="clearInput(document.getElementById('clear').value)">Clear</button>
         </div>
       </div>
-  </div>
+    </div>
     <div class="separar">
   <div class="main">
     <h1>Calculadora de Core</h1>
@@ -54,11 +54,11 @@
     <div class="texto">
     <h3> Operaciones unitarias </h3>
   </div>
-  <div class="botones">
-    <button id="cuaq" onclick="cuadrado()">x<sup>2</sup></button>
-    <button id="cube" onclick="cubo()">x<sup>3</sup></button>
-    <button id="modific" onclick="mod()">mod</button>
-    <button id="factorirty" onclick="factorial()">n!</button>
+  <div class="botones" >
+    <button id="cuadrado" onclick="cuadrado()">x<sup>2</sup></button>
+    <button id="cubo" onclick="cubo()" onmouseover="mOver(this)" onmouseout="mOut(this)">x<sup>3</sup></button>
+    <button id="mod" onclick="mod()">mod</button>
+    <button id="factorial" onclick="factorial()">n!</button>
   </div>
     <div class="texto">
     <h3>Operaciones binarias </h3>
@@ -76,13 +76,13 @@
     <h3>Operaciones en formato CSV</h3>
   </div>
   <div class="botones">
-    <button id="sumatorio" onclick="sumatorio()">&#8721x</button>
-    <button id="ordenar" onclick="ordenar()">ordenar</button>
-    <button id="revertir" onclick="revertir()">revertir</button>
-    <button id="quitar" onclick="quitar()">quitar</button>
+    <button id="sumatorio" onclick="sumary()">&#8721x</button>
+    <button id="ordenar" onclick="order()">ordenar</button>
+    <button id="revertir" onclick="reverse()">revertir</button>
+    <button id="quitar" onclick="quitaquita()">quitar</button>
   </div>
   <div class="texto">
-    <h2 id="p01">eee</h2>
+    <h2 id="p01"></h2>
   </div>
   </div>
 </div>

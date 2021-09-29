@@ -1,9 +1,19 @@
+//Calculadora de Core
+
 
 //Definimos variables globales
 var numero1 = 0
 var numero = 0
 var operador =""
 
+
+function mOver(obj) {
+    document.getElementById("cubo").style.color = "blue"
+  }
+
+function mOut(obj) {
+    document.getElementById("cubo").style.color = "black"
+  }
 
 //Funcion que vacia el contenido de la consola
 
@@ -24,168 +34,6 @@ else if (num < 200){
 else if (num > 200){
     document.getElementById("info").innerHTML = "Info: El resultado es superior a 200"
 }
-}
-
-//no puedo meter numeros de varios digitos -- los concateno
-//no tengo la funcion de coma implementada
-var actualiza_info0 = () => {
-if (numero1 == 0 && numero == 0) {
-
-numero1 = 0
-document.getElementById("consola").innerHTML = numero1
-}
-
-else if (numero1 != 0 && numero == 0){
-numero = 0
-document.getElementById("consola").innerHTML = numero1 + operador + numero
-}}
-
-var actualiza_info1 = () => {
-if (numero1 == 0 && numero == 0) {
-numero1 = 1
-document.getElementById("consola").innerHTML = numero1
-}
-else if (numero1 != 0 && numero == 0){
-numero = 1
-document.getElementById("consola").innerHTML = numero1 + operador + numero
-}}
-
-var actualiza_info2 = () => {
-if (numero1 == 0 && numero == 0) {
-numero1 = 2
-document.getElementById("consola").innerHTML = numero1
-}
-else if (numero1 != 0 && numero == 0){
-numero = 2
-document.getElementById("consola").innerHTML = numero1 + operador + numero
-}}
-
-var actualiza_info3 = () => {
-if (numero1 == 0 && numero == 0) {
-numero1 = 3
-document.getElementById("consola").innerHTML = numero1
-}
-else if (numero1 != 0 && numero == 0){
-numero = 3
-document.getElementById("consola").innerHTML = numero1 + operador + numero
-}}
-
-var actualiza_info4 = () => {
-if (numero1 == 0 && numero == 0) {
-numero1 = 4
-document.getElementById("consola").innerHTML = numero1
-}
-else if (numero1 != 0 && numero == 0){
-numero = 4
-document.getElementById("consola").innerHTML = numero1 + operador + numero
-}}
-
-var actualiza_info5 = () => {
-if (numero1 == 0 && numero == 0) {
-numero1 = 5
-document.getElementById("consola").innerHTML = numero1
-}
-else if (numero1 != 0 && numero == 0){
-numero = 5
-document.getElementById("consola").innerHTML = numero1 + operador + numero
-}}
-
-var actualiza_info6 = () => {
-if (numero1 == 0 && numero == 0) {
-numero1 = 6
-document.getElementById("consola").innerHTML = numero1
-}
-else if (numero1 != 0 && numero == 0){
-numero = 6
-document.getElementById("consola").innerHTML = numero1 + operador + numero
-}}
-
-var actualiza_info7 = () => {
-if (numero1 == 0 && numero == 0) {
-numero1 = 7
-document.getElementById("consola").innerHTML = numero1
-}
-else if (numero1 != 0 && numero == 0){
-numero = 7
-document.getElementById("consola").innerHTML = numero1 + operador + numero
-}}
-
-var actualiza_info8 = () => {
-if (numero1 == 0 && numero == 0) {
-numero1 = 8
-document.getElementById("consola").innerHTML = numero1
-}
-else if (numero1 != 0 && numero == 0){
-numero = 8
-document.getElementById("consola").innerHTML = numero1 + operador + numero
-}}
-
-var actualiza_info9 = () => {
-if (numero1 == 0 && numero == 0) {
-numero1 = 9
-document.getElementById("consola").innerHTML = numero1
-}
-else if (numero1 != 0 && numero == 0){
-numero = 9
-document.getElementById("consola").innerHTML = numero1 + operador + numero
-}}
-
-
-var suma = () => {
-    operador = "+"
-    document.getElementById("consola").innerHTML = numero1 + operador
-}
-
-var rest = () => {
-    operador = "-"
-    document.getElementById("consola").innerHTML = numero1 + operador
-}
-
-var multiplic = () => {
-    operador = "*"
-    document.getElementById("consola").innerHTML = numero1 + operador
-}
-
-var dividir = () => {
-    operador = "/"
-    document.getElementById("consola").innerHTML = numero1 + operador
-}
-
-var igual = () => {
-
-    if (operador == "-") {
-        document.getElementById("consola").innerHTML = numero1 + operador + numero + " = " + (numero1-numero)
-        operador == ""
-        numero == 0
-
-    }
-    else if (operador == "*") {
-        document.getElementById("consola").innerHTML = numero1 + operador + numero + "=" + (numero*numero1)
-        operador == ""
-        numero == 0
-    }
-    else if (operador == "+") {
-        document.getElementById("consola").innerHTML = numero1 + operador + numero + " = " + (numero+numero1)
-        operador == ""
-        numero == 0
-
-    }
-    else if (operador == "/") {
-        document.getElementById("consola").innerHTML = numero1 + operador + numero + "=" + (numero1/numero)
-        operador == ""
-        numero == 0
-    }
-    else if (operador == "%") {
-        document.getElementById("consola").innerHTML = numero1 + operador + numero + "=" + (numero1%numero)
-        operador == ""
-        numero == 0
-    }
-    else if (operador == "**") {
-        num.value = Number(numero1) ** Number(numero)
-        operador == ""
-        numero == 0
-    }
-
 }
 
 //Funcion que calcula el cuadrado de un numero
@@ -301,9 +149,6 @@ var potencia = () =>  {
     vaciar()
     }
 
-
-
-
 //Funcion que hace uso de las variables globales para realizar la operacion correspondiente
 
 var eq = () =>  {
@@ -391,7 +236,7 @@ var quitar = () => {
 
 var validar = () => {
 let num = document.getElementById("pantalla");
-const message = document.getElementById("p01");
+var message = document.getElementById("p01");
   message.innerHTML = "";
 try {
     if(isNaN(num.value)) throw "Error al introducir los datos. Vuelva a intentarlo";
@@ -405,7 +250,7 @@ try {
 
 var validar_lista = () => {
 let num = document.getElementById("pantalla");
-const message = document.getElementById("p01");
+var message = document.getElementById("p01");
 message.innerHTML = "";
 let list = num.value.split(",");
 for (let i of list) {
@@ -415,14 +260,20 @@ for (let i of list) {
         }
         catch(err) {
         message.innerHTML =  err
+        }
     }
 }
 
-}
+
+//CALCULADORA DE BOTONES
+
+//Funcion que almacena el valor escrito en la pantalla y lo añade a los valores anteriores introducidos
 
 function takeValue(x) {
 	document.getElementById('inputwindow').value += x;
 }
+
+//Funcion que elimina los valores introducidos previamente en la calculadora de botones
 
 function clearInput(y) {
 	document.getElementById('inputwindow').value = y;
