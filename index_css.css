@@ -82,6 +82,12 @@ div.results input {
 	font-size: 16px;
 }
 
+#sumatorio,#ordenar,#revertir,#quitar {
+	width: max-content;
+}
+
+
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
